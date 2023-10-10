@@ -1,0 +1,49 @@
+body {
+    font-family: 'Young Serif', serif;
+}
+
+
+
+video {
+    width: 100%; /* ปรับความกว้างของวิดีโอ เช่น 50% ของขนาดต้นฉบับ */
+    height: auto; /* ทำให้ความสูงปรับตามอัตราส่วน */
+}
+
+.card-img img {
+    max-width: 100%; /* ให้รูปภาพที่อยู่ในการ์ดไม่เกินขอบของการ์ด */
+    display: block; /* ปรับให้รูปภาพแสดงเป็นบล็อก */
+    margin: 0 auto; /* จัดรูปภาพตามจุดศูนย์กลาง */
+}
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
